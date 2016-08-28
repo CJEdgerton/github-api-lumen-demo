@@ -40,6 +40,10 @@ var app = new Vue({
 		searchQuery: '',
 		gridColumns: [
 			{
+				name :'id', 
+				display: 'Repo ID'
+			},
+			{
 				name :'name', 
 				display: 'Repo Name'
 			},
