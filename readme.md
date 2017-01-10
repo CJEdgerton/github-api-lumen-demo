@@ -1,4 +1,4 @@
-## VICTR Programming Assessment 
+## GitHub API / Larevel Demo
 
 This is a basic demo showing usage of the GitHub API. On page load, the api is called, and the database is updated with data from the most starred php repositories. Rather than sending the data directly to the client on page load, an ajax request is made to the server to get the data, and populate the table. In a real app this might be redundant, but it is to demonstrate front-end techniques in addition to the standard project requirements.
 
