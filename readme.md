@@ -25,13 +25,13 @@ This is a basic demo showing usage of the GitHub API. On page load, the api is c
 	- On Windows `C:\MAMP\htdocs\`
 - Using the MAMP UI pane, select "Preferences" and navigate to the "Web Server" tab.
 - Select "Document Root" and navigate to the project folder and select the `public` directory.
-	- e.g. on OSX `/Applications/MAMP/htdocs/victr_programming_assesment/public`
+	- e.g. on OSX `/Applications/MAMP/htdocs/github_api_laravel_demo/public`
 
 #### Database Setup
 - To connect to MAMP's MySQL server from your host machine via Navicat or Sequel Pro, you should connect to `127.0.0.1` and port `8889`. 
 	- The username and password is `root` / `root`.
 	- You can verify the correct port from the MAMP UI pane, select "Preferences" and navigate to the "Ports" tab.
-- Within your MySQL client create a database called `victr_programming_assesment`.
+- Within your MySQL client create a database called `github_api_laravel_demo`.
 - Use the raw sql in `create-repos.sql` file located in the project's `database/` directory to create the application's tables.
 - Within the project's `.env` file, set the database connection information as follows.
 
@@ -39,7 +39,7 @@ This is a basic demo showing usage of the GitHub API. On page load, the api is c
 DB_CONNECTION=mysql
 DB_HOST=localhost
 DB_PORT=8889
-DB_DATABASE=victr_programming_assessment
+DB_DATABASE=github_api_laravel_demo
 DB_USERNAME=root
 DB_PASSWORD=root
 ```
@@ -53,15 +53,15 @@ DB_PASSWORD=root
 - Download and install Vagrant following the instructions [here](https://www.vagrantup.com/docs/installation/) (requires VirtualBox)
 - Follow the instructions [here](https://laravel.com/docs/5.2/homestead) to download and configure the Laravel Homestead.
 - Once installed clone this repo to the shared directory that you configured when [configuring Homestead](https://laravel.com/docs/5.2/homestead#configuring-homestead).
-- In your `Homestead.yaml` file map the project to a domain of your choice (e.g. victr_programming_assesment.app).
+- In your `Homestead.yaml` file map the project to a domain of your choice (e.g. github_api_laravel_demo.app).
 
 ```
 sites:
-    - map: victr_programming_assesment.app
-      to: /home/vagrant/Code/victr_programming_assesment/public
+    - map: github_api_laravel_demo.app
+      to: /home/vagrant/Code/github_api_laravel_demo/public
 ```
 
-- Edit your hosts file, adding an entry for the domain `192.168.10.10  victr_programming_assesment`
+- Edit your hosts file, adding an entry for the domain `192.168.10.10  github_api_laravel_demo`
 	- On Mac and Linux, this file is located at `/etc/hosts`. On Windows, it is located at `C:\Windows\System32\drivers\etc\hosts`.
 
 #### Launching the VM
@@ -77,7 +77,7 @@ sites:
 DB_CONNECTION=mysql
 DB_HOST=localhost
 DB_PORT=3306
-DB_DATABASE=victr_programming_assessment
+DB_DATABASE=github_api_laravel_demo
 DB_USERNAME=homestead
 DB_PASSWORD=secret
 ```
@@ -85,6 +85,6 @@ DB_PASSWORD=secret
 
 - Navigate to the web root to view the application `http://localhost:8888/`
 - Run `vagrant ssh` to ssh into the machine and `cd` into the shared directory then into the project.
-	- e.g. `cd Code/victr_programming_assesment`
+	- e.g. `cd Code/github_api_laravel_demo`
 - Run `php artisan migrate` to create the database tables
-- Now navigate to the application (`victr_programming_assesment.app`)
+- Now navigate to the application (`github_api_laravel_demo.app`)
